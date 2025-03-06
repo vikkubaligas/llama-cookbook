@@ -31,22 +31,6 @@ def openai_run(system_prompt, user_message):
 	return message.content    
 
 
-def anthropic_run(system_prompt, user_message):
-	import anthropic 
-	client = anthropic.Anthropic(  
-	api_key=ANTHROPIC_API_KEY,
-	)
-	message = client.messages.create(
-	model="claude-3-sonnet-20240229", #"claude-3-opus-20240229",
-	max_tokens=4096,
-	system=system_prompt,
-	messages=[
-	 {"role": "user", "content": user_message}
-	]
-	)
-	return message.content[0].text
-
-
 def deepinfra_run(system_prompt, user_message):
 	chat_completion = openai.chat.completions.create(
 		model="meta-llama/Meta-Llama-3.1-405B-Instruct",
