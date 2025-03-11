@@ -11,8 +11,7 @@
 **Getting started**
 In this cookbook, we’ll use DeepInfra for Llama inference services, so be sure to obtain an API key from https://deepinfra.com/.
 You'll also need a LlamaParse API key to parse PDF files, which can be obtained from https://www.llamaindex.ai/.
-Additionally, an OpenAI API key is required for embeddings.
+Additionally, we will use the "jinaai/jina-embeddings-v2-base-en" model from HuggingFace to generate text embeddings locally.
 Before getting started, update the <code>config.py</code> file as following:
-    "DEEPINFRA_API_KEY"="<your_api_key>"
-    "OPENAI_API_KEY"="<your_api_key>"
+    "DEEPINFRA_API_KEY"="<your_api_key>"    
     "LLAMAPARSE_API_KEY"="<your_api_key>"
