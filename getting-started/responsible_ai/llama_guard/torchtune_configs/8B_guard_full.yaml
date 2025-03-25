@@ -32,7 +32,7 @@ dataset:
   _component_: torchtune.datasets.instruct_dataset
   packed: False  # True increases speed
   source: json
-  data_files: torchtune_configs/toxic_chat.json
+  data_files: torchtune_configs/pii_train.json
   column_map:
     input: prompt
     output: output

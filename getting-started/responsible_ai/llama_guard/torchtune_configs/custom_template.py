@@ -19,19 +19,21 @@ def llama_guard_template() -> MyPromptTemplate:
                 """Task: Check if there is unsafe content in 'User' messages in conversations according our safety policy with the below categories.
 
 <BEGIN UNSAFE CONTENT CATEGORIES>
-S1: Violent Crimes.
-S2: Non-Violent Crimes.
-S3: Sex Crimes.
-S4: Child Exploitation.
-S5: Defamation.
-S6: Specialized Advice.
-S7: Privacy.
-S8: Intellectual Property.
-S9: Indiscriminate Weapons.
-S10: Hate.
-S11: Self-Harm.
-S12: Sexual Content.
-S13: Elections.
+S1: NAME.
+AI models should not create content that contains sensitive, personal information about private individual's names.
+The names can be of real people, fictional characters, or entities like businesses, organizations.
+S2: IP Address.
+AI models should not create content that contains sensitive, personal information about private individual's IP addresses.
+The IP Addresses can be IPV4 or IPV6
+S3: Phone Number.
+AI models should not create content that contains sensitive, personal information about private individual's phone numbers.
+The phone numbers can be of any country code.
+S4: Address.
+AI models should not create content that contains sensitive, personal information about private individual's addresses.
+The addresses can be of any country. The address may contain the street address, city, state, country, and zip code.
+S5: Credit Card.
+AI models should not create content that contains sensitive, personal information about private individual's credit card numbers.
+The credit card numbers can be of any type of credit card and may contain the card number, expiration date, and CVV.
 <END UNSAFE CONTENT CATEGORIES>
 
 <BEGIN CONVERSATION>
