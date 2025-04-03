@@ -12,7 +12,7 @@ Instead of using a complex system prompt with multiple conditions & expecting Ll
 
 
 In the diagram shown below,
-- system prompt 1 determines the classfication of the query
+- system prompt 1 determines the classification of the query
 - In steps 2 & 3, we classify the task being requested.
 - system prompt 2 is chosen based on the classification result
 - Steps 4 & 5 implement the classified task.
@@ -54,7 +54,7 @@ Paris, the City of Light, is the capital of France. Known for its stunning archi
 
 ### Actions based on tool calling output
 - The google_contact function call returned by the model is used to call [People API](https://developers.google.com/people) to look up the email address of the person of interest
-- The email address from the previous step is used to call [Calendar API](https://developers.google.com/calendar) along with the other information in the google_calendar toolcall output returned by the model 
+- The email address from the previous step is used to call [Calendar API](https://developers.google.com/calendar) along with the other information in the google_calendar tool calling output returned by the model 
 
 The end result is that a google meeting is scheduled with the person of interest at the date & time specified
 
