@@ -31,22 +31,26 @@ Additionally, this demo also showcases how Llama can be used to do double tool c
 
 - General query
 
-  **User Prompt** : *Tell me about Paris*
+  **User Prompt** : `Tell me about Paris`
 
-  **Prompt Classification**: general
+  **Prompt Classification**: `general`
 
   **Answer**: 
-  Paris, the City of Light, is the capital of France. Known for its stunning architecture, art museums, and romantic atmosphere, Paris is a popular tourist destination. The city is famous for its iconic landmarks such as the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum, which houses the Mona Lisa. Paris is also renowned for its fashion, cuisine, and wine. The city's charming streets and historic neighborhoods, like Montmartre and Le Marais, offer a glimpse
+```
+Paris, the City of Light, is the capital of France. Known for its stunning architecture, art museums, and romantic atmosphere, Paris is a popular tourist destination. The city is famous for its iconic landmarks such as the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum, which houses the Mona Lisa. Paris is also renowned for its fashion, cuisine, and wine. The city's charming streets and historic neighborhoods, like Montmartre and Le Marais, offer a glimpse
+```
 
 - Set up a Calendar Invite
 
-  **User Prompt** : *Schedule a meeting with John Constantine on Mar 31 at 5:30 pm*
+  **User Prompt** : `Schedule a meeting with John Constantine on Mar 31 at 5:30 pm`
 
-  **Prompt Classification**: meeting
+  **Prompt Classification**: `meeting`
 
   **Answer**: 
+```
   <function=google_contact>{{"name": "John Constantine"}}</function>
   <function=google_calendar>{{"date": "Mar 31", "time": "5:30 pm", "attendees": "John Constantine"}}</function>
+```
 
 ### Actions based on tool calling output
 - The google_contact function call returned by the model is used to call [People API](https://developers.google.com/people) to look up the email address of the person of interest
